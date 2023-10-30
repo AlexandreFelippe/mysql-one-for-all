@@ -1,7 +1,7 @@
 SELECT 
-    COUNT(m.nome) AS cancoes,
-    COUNT(ar.nome) AS artistas,
-    COUNT(al.album) AS albuns
+    COUNT(DISTINCT m.nome) AS cancoes,
+    COUNT(DISTINCT ar.nome) AS artistas,
+    COUNT(DISTINCT al.album) AS albuns
 FROM
     musicas m
         INNER JOIN
