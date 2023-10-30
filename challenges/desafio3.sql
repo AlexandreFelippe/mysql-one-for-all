@@ -1,7 +1,7 @@
 SELECT 
     pu.nome AS 'pessoa_usuaria',
     COUNT(hr.musica_id) AS 'musicas_ouvidas',
-    SUM(m.duracao / 60) AS 'total_minutos'
+    SUM(ROUND(m.duracao / 60, 2)) AS 'total_minutos'
 FROM
     pessoas_usuarias pu
         INNER JOIN
