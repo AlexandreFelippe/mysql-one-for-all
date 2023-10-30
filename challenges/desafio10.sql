@@ -1,4 +1,6 @@
-CREATE TABLE cancoes_favoritas(
+USE SpotifyClone;
+
+CREATE TABLE musicas_favoritas(
     musica_id INT NOT NULL,
     pessoa_usuaria_id INT NOT NULL,
     PRIMARY KEY (pessoa_usuaria_id , musica_id),
@@ -8,7 +10,7 @@ CREATE TABLE cancoes_favoritas(
         REFERENCES musicas (musica_id)
 ) engine = InnoDB;
 
-INSERT INTO cancoes_favoritas(pessoa_usuaria_id, musica_id)
+INSERT INTO musicas_favoritas(pessoa_usuaria_id, musica_id)
 VALUES
   ('1', '3'),
   ('1', '6'),
