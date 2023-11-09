@@ -1,3 +1,5 @@
+USE SpotifyClone;
+
 SELECT 
     a.nome AS artista,
     CASE
@@ -15,4 +17,4 @@ FROM
         LEFT JOIN
     musicas_favoritas mf ON m.musica_id = mf.musica_id
 GROUP BY a.nome
-ORDER BY COUNT(ranking) DESC , a.nome;
+ORDER BY COUNT(mf.musica_id) DESC, a.nome;
